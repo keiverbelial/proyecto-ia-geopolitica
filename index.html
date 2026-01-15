@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Geopolítica - Panel Operativo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="titulo">Operadora IA Estratégica</h2>
+    
+    <div class="teclado">
+    <button onclick="enviarAlBackend('1')">1. PIB</button>
+    <button onclick="enviarAlBackend('2')">2. NUCLEAR</button>
+    <button onclick="enviarAlBackend('3')">3. TANQUES</button>
+    <button onclick="enviarAlBackend('4')">4. AVIONES</button>
+    <button onclick="enviarAlBackend('5')">5. POBLACIÓN</button>
+    <button onclick="enviarAlBackend('6')">6. ORO</button>
+</div>
+
+    <div class="input-area">
+        <input type="text" id="usuario-input" placeholder="Escriba su pregunta aquí..." onkeypress="handleKey(event)">
+        <button class="btn-send" onclick="enviarTexto()">ENVIAR</button>
+    </div>
+
+    <button id="btn-voz" class="btn-mic" onclick="activarVoz()">🎤 HABLAR CON LA IA</button>
+
+    <div id="respuesta-texto">Sistema listo para comando...</div>
+    
+    <div class="grafica-box">
+        <canvas id="canvasGeo"></canvas>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+/* Colores Geopolíticos Oscuros */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #1a1a2e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+}
+
+.container {
+    background: #16213e;
+    max-width: 700px;
+    margin: 10px auto;
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid #0f3460;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+}
+
+.titulo {
+    color: #e94560;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.8rem; /* Más grande y llamativo */
+    margin-bottom: 25px;
+}
+
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 18px 10px; /* Más espacio para los dedos */
+    font-size: 16px; /* Tamaño de lectura clara */
+    cursor: pointer;
+    border-radius: 12px;
+    border: none;
+    background: #0f3460;
+    color: #e94560;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background: #e94560;
+    color: white;
+}
+
+.input-area {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 18px; /* Input más alto para facilitar escritura */
+    border-radius: 12px;
+    border: 2px solid #0f3460;
+    background: #1a1a2e;
+    color: white;
+    font-size: 16px; /* Evita que el iPhone haga zoom automático */
+    outline: none;
+}
+
+input:focus {
+    border-color: #e94560;
+}
+
+.btn-send {
+    background: #28a745;
+    color: white;
+    padding: 0 25px;
+    font-size: 18px;
+}
+
+.btn-mic {
+    background: #e94560;
+    width: 100%;
+    color: white;
+    padding: 20px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#respuesta-texto {
+    min-height: 80px;
+    margin-top: 25px;
+    padding: 20px;
+    background: #0f172a;
+    border-radius: 12px;
+    line-height: 1.6;
+    color: #fff;
+    border-left: 6px solid #e94560;
+    text-align: left;
+    font-size: 16px;
+}
+
+.grafica-box {
+    margin-top: 25px;
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    overflow: hidden; /* Evita que la gráfica se salga en pantallas mini */
+}
+
+/* --- AJUSTES PARA MÓVILES (FÁCIL LECTURA) --- */
+@media (max-width: 600px) {
+    body { padding: 10px; }
+    
+    .container { padding: 15px; border-radius: 15px; }
+
+    .teclado {
+        grid-template-columns: repeat(2, 1fr); /* Botones más anchos de 2 en 2 */
+        gap: 12px;
+    }
+
+    button { padding: 22px 10px; font-size: 18px; } /* Botones gigantes para pulgares */
+
+    .input-area {
+        flex-direction: column;
+    }
+
+    .btn-send {
+        width: 100%;
+        padding: 18px;
+    }
+
+    .titulo { font-size: 1.4rem; }
+}
